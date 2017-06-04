@@ -1,0 +1,38 @@
+﻿<div>
+    <form>
+          
+        <div class="col-lg-12">
+            <div  class="col-lg-12">
+                <label style="width:250px;">Search by First Name</label>
+                <input type="text" placeholder="type first name here.." ng-model="people.FirstName" />
+            </div>
+            <div  class="col-lg-12">
+                <label style="width:250px;">Search by Last Name</label>
+                <input  type="text" placeholder="type last name here.." ng-model="people.LastName" />
+            </div>
+        </div>
+    </form>
+    <div>
+        <form>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Age</th>
+                        <th>Age Group</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="people in peopleList | filter : people ">
+                        <td>{{people.FirstName}}</td>
+                        <td>{{people.LastName}} </td>
+                        <td>{{people.Age}} </td>
+                        <td>{{people.AgeGroup}}</td>
+                        
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+    </div>
+</div>
